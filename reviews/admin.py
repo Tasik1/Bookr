@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Publisher, Book, Review, Contributor
+from .models import Publisher, Book, Review, Contributor, BookContributor
 
 
 # Register your models here.
@@ -14,6 +14,7 @@ class ContributorAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Publisher)
-admin.site.register(Book, MemberAdmin)
-admin.site.register(Review)
 admin.site.register(Contributor, ContributorAdmin)
+admin.site.register(Book, MemberAdmin)
+admin.site.register(BookContributor)
+admin.site.register(Review)
